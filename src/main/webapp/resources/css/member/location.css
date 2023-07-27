@@ -1,0 +1,47 @@
+@charset "UTF-8";
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.location-map{
+    border-radius:25px;
+    margin-right: 20px;
+    width:600px;
+    height:400px
+}
+.location-btn{
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: center;
+}
+.location-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.location-title{
+    font-weight: bold;
+    font-size: 25px;
+}
+.location-cont{
+    font-size: 20px;
+    margin-top: 5px;
+    padding-right: 50px;
+    width:600px;
+}
+.location-part{
+	display:flex;
+	flex-direction:column;
+	height:400px;
+	justify-content: space-around;
+}
+.location-curr{
+	font-size: 20px;
+	width:120px;
+	border:none;
+	font-family: 'Apple SD Gothic Neo','MYArirang_gothic','Malgun Gothic',arial,sans-serif;
+}
+.location-curr:focus {outline:none;}

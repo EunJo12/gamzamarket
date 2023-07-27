@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'MYArirang_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYArirang_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body, pre{
+    font-family: 'Apple SD Gothic Neo','MYArirang_gothic','Malgun Gothic',arial,sans-serif;
+}
+textarea{
+	 font-family: 'Apple SD Gothic Neo','MYArirang_gothic','Malgun Gothic',arial,sans-serif;
+}
+body{
+	min-width:650px;
+}
+.header-logos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header-gamza{
+    width: 80px;
+    }
+.header-korlogo{
+    width: 170px;
+    }
+.header-adminLogin{
+    width: 45px;
+    opacity: 0.35;
+    margin-right: -7px;
+}
+    
+.header-memberLogin {
+	width: 50px;
+    opacity: 0.35;
+    margin-right: -7px;
+}
+
+
+.header-loginBtn img {
+	width: 40px;
+    opacity: 0.35;
+    cursor: pointer;
+}
+
+.header-login {
+	border: 0;
+	background: transparent;	
+}
+
+
+.header-loginBtn {
+	border: 0;
+	background: transparent;
+}
+.notiBox{
+	display:flex;
+	flex-direction:row;
+	align-items: flex-start;
+}
+.header-notify{
+	opacity: 0.35;
+    margin-right: -7px;
+    width:38px;
+    position:reletive;
+}
+.header-notify:hover{
+	cursor:pointer;
+}
+.notiRedDot{
+	width: 28px;
+    position: absolute;
+    right: 220px;
+    top: 30px;
+    display:none;
+}
+.header-loginBtn i {
+    cursor: pointer;
+}
+.upperIconBox{
+	display:flex;
+	flex-direction:row;
+	align-items: center;
+	width: 150px;
+    justify-content: flex-end;
+}
+.upperIconBox>*{
+	margin:0 5px;
+}
+.header-logoutBtn {
+	border: 0;
+	background: transparent;
+	padding-left: 6px;
+}
+
+.header-logoutBtn i {
+    cursor: pointer;
+}
+ 
+.header-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-top{
+    padding: 30px 100px;
+}
+.header-catemenu{
+    width: 20px;
+    margin-right: 7px;
+    align-items: center;
+}
+.header-category,.header-logos,.header-login,.header-searchicon:hover{
+    cursor: pointer;
+}
+.header-menu{
+    position: relative;
+    text-decoration: none;
+    color: rgb(55, 55, 55);
+    font-size: 17px;
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+}
+.headder-cateA{
+    text-align: left;
+    width: 70px;
+}
+.header-menu:hover{
+    color: black;
+}
+.header-category{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100px;
+}
+.header-mid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.header-midout{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px 20px;
+}
+.header-searchicon{
+    height: 20px;
+    opacity: 0.35;
+    margin-right: -30px;
+}
+.header-search{
+    border-radius: 20px;
+    height: 30px;
+    width: 230px;
+    padding: 0 10px;
+    padding-left: 35px;
+    border: rgb(175, 175, 175) solid 2px;
+}
+.header-searchbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.category-drop{
+    background-color: rgba(255, 255, 255, 0.9);
+    /* background-color: rgba(255, 228, 196, 0.64); */
+    padding: 30px;
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.category-list>p{
+    text-decoration: none;
+    color: black;
+    width: 110px;
+    cursor:pointer;
+}
+.category-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 30px 0;
+    text-align: center;
+}
+.category-menu:hover{
+    font-weight: bold;
+}
+.button {
+	font-family: 'Apple SD Gothic Neo','MYArirang_gothic','Malgun Gothic',arial,sans-serif;
+    display: inline-block;
+    width: 130px;
+    height: 50px;
+    padding: 0;
+    margin: 10px 20px 10px 0;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 20px;
+    transition: all 0.2s ;
+    background: #60b565b7;
+    border:solid 1px #60b565b7;
+    color:white;
+    font-weight:bold;
+    font-size:16px;
+  }
+  .button:hover{
+    background: rgb(35, 117, 84);
+    cursor:pointer;
+  }
+  
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#notiModal {
+	position: absolute;
+	z-index: 10;
+	right: 60px;
+	top: 100px;
+	width: 400px;
+    height: 500px;
+	overflow: auto;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+	display:none;
+	background-color: white;
+}
+.notiModal-content {
+	position: relative;
+	background-color: white;
+	padding: 30px 30px;
+	text-align: center;
+	top: 0;
+	border-radius: 3px;
+}
+.notiDiv{
+	margin:20px auto;
+}
+.notiContent{
+	width:320px;
+	font-size:14px;
+}
+.notiContent:hover{
+	cursor:pointer;
+	text-decoration:underline;
+	text-underline-position:under;
+}
+.notiTime{
+	margin-top:10px;
+	font-size:12px;
+	color:#c0c0c0;
+}
+.notiTime{
+	text-align:right;
+}

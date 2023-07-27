@@ -1,0 +1,106 @@
+@charset "UTF-8";
+	/* 공구게시판 */
+    .GGlistSec {
+        width: 1200px;
+        margin: 30px auto;
+       position:relative;
+    }
+    /* 한 줄에 세 이미지 박스 */
+	.onelineThreebox{
+		display:inline-block;
+		margin: 50px 0px 0px 80px;
+		position: relative;
+	}
+	.onelineThreebox:hover{
+		cursor:pointer;
+	}
+	.onelineThreeImg{
+		width: 300px;
+		height:300px;
+		overflow:hidden;
+	}
+	
+    .onelineThreeImg>img{
+		max-width: 300px;
+		/* height: 300px; */
+		border-radius:10px;
+    }
+	.onelineThreeTitle {
+		position: absolute;
+		bottom: 0%;
+		background-color: rgba(240, 248, 255, 0.692);
+		padding: 10px;
+		width: 80%;
+		height: 35%;
+		display:flex;
+		flex-direction:column;
+		justify-content: center
+	}
+	.onelineThreeTitle>*{
+		margin:3px 0 3px;
+	}
+	.ggTitle{
+		font-size: 15px;
+		font-weight: bold;
+	}
+.when-ggEnd{
+	display:flex;
+	flex-direction:row;
+    align-items: flex-end;
+}
+.ggEnd-tag{
+	font-size:12px;
+	background-color:#F9E8D0; 
+	border-radius:10px;
+	padding:3px 4px;
+	margin-right:5px;
+}
+.sortByPart{
+	display:flex;
+	justify-content: space-between
+}
+.sortByPart input{
+	width:20px;
+}
+.GGlist-a {
+	text-decoration: none;
+	color: black;
+	font-size: 15px;
+}
+	.GGlist-a:hover{
+		cursor:pointer;
+		text-decoration:underline;
+		text-underline-position:under;
+	}
+	.currAdd{
+		width:1200px;
+		margin: 20px auto;
+	}
+
+.loginWarning img{
+	height:18px;
+	opacity:0.5;
+}
+.loginWarning img:hover{
+	cursor:pointer;
+}
+.loginWarning{
+	width:585px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color:rgba(243, 207, 159, 0.3);
+	padding:5px;
+	position: absolute;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    box-shadow: 3px 3px 3px #d4d4d4;
+}
+.emptyggList{
+	height:300px;
+	text-align:center;
+	display:flex;
+	justify-content: center;
+    align-items: center;
+}	
+}

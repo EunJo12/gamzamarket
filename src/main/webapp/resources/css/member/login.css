@@ -1,0 +1,264 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	background: #fff;
+	min-width: 320px;
+	-webkit-text-size-adjust: none;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+label, img, input, select, textarea, button {
+	vertical-align: middle;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.login-info input {
+	width: 300px;
+	height: 45px;
+	margin-bottom: 8px;
+	color: #373737;
+	border: 1px solid #e9e9e9;
+	background: #fff;
+	border-radius: 5px;
+	vertical-align: middle;
+	transition: all 0.5s;
+	/* padding-bottom: 5px; */
+}
+
+.login-info input[type=text], .login-info  input[type=password] {
+	text-indent: 10px;
+	font-size: 15px;
+}
+
+input:focus {
+	outline: 1px solid #ddd;
+}
+
+input::-webkit-input-placeholder {
+	color: #b5b5b5;
+	font-size: 15px;
+	line-height: 100%;
+	font-family: 'Apple SD Gothic Neo','MYArirang_gothic','Malgun Gothic',arial,sans-serif;
+}
+
+.login-btn {
+	width: 300px;
+	height: 45px;
+	margin-bottom: 8px;
+	/* background-color: #E9D296; */
+	background-color: rgba(94, 177, 98, 0.75); ;
+	/* border: 1px solid #F3D774; */
+	border: 1px solid #e9e9e9;
+	border-radius: 5px;
+	color: #ffffff;
+	/* color: #373737; */
+	font-size: 16px;
+	font-weight: 900;
+	/* border: 1px solid #F3D774; */
+	vertical-align: middle;
+	transition: all 0.5s;
+}
+
+
+.modal-login {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-hidden {
+	display: none;
+}
+
+.modal-bg {
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#modal {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;
+}
+
+.modal-content {
+	position: relative;
+	background-color: #ffffff;
+	padding: 60px 100px;
+	text-align: center;
+	top: 0;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
+		rgb(0, 0, 0, 0.23);
+	/* width: 30%;
+ 	 height: 30%; */
+	width: 300px;
+	height: 470px;
+	border-radius: 3px;
+}
+
+.modal-content h2 {
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+
+.login-chkbox {
+	text-align: start;
+	padding: 10px 0;
+}
+
+.login-chkbox label {
+	padding-left: 5px;
+	font-size: 13px;
+}
+
+.login-bottom {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.login-bottom li {
+	padding: 10px 0;
+}
+
+.login-bottom li a {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.modal-closeBtn {
+	position: absolute;
+	right: 12px;
+	top: 10px;
+	cursor: pointer;
+	/* background: url("../resources/img/header/close-icon.png") no-repeat; */
+	background: url("close-icon.png") no-repeat; /* 경로 수정 예정 */
+	color: transparent;
+	width: 41px;
+	height: 41px;
+	
+	
+}
+
+
+
+/* 간편 로그인 */
+.social-icon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+}
+
+.social-container {
+	padding: 16px 0;
+	/* display: flex;
+	flex-direction: column;
+	padding: 20px 0; */
+}
+
+.social-container h3 {
+	padding: 16px;
+}
+
+.login-kakao a img {
+	width: 300px;
+	height: 45px;
+	/* margin-bottom: 8px;
+	color: #373737;
+	border: 1px solid #e9e9e9;
+	background: #fff;
+	border-radius: 5px;
+	vertical-align: middle;
+	transition: all 0.5s; */
+	/* padding-bottom: 5px; */
+}
+
+.login-kakao {
+	padding-bottom: 5px;
+}
+
+.login-naver a img {
+	/* object-fit: cover;
+	width: 300px; */
+	height: 45px;
+}
+	
+	
+	
+	/* position: absolute;
+	width: 100%;
+	top: 50%;
+ 	left: 50%;
+	transform: translate(-50%, -50%); */
+	
+	
+	/* margin-bottom: 8px;
+	color: #373737;
+	border: 1px solid #e9e9e9;
+	background: #fff;
+	border-radius: 5px;
+	vertical-align: middle;
+	transition: all 0.5s; */
+	/* padding-bottom: 5px; */
+}
+
+
+
+
+.social-container h3 {
+	/* padding: 18px 0 */
+}
+
+.social-icon ul {
+	/* display: flex;
+	justify-content: center; */
+}
+
+.login-kakao img {
+	/* width: 170px;
+	height: 60px; */
+}
+
+.login-naver img {
+	/* width: 170px;
+	height: 60px; */
+}
+
+.login-kakao {
+	/* padding: 0 10px; */
+}
