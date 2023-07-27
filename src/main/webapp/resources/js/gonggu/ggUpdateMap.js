@@ -10,7 +10,7 @@
         	type:"get",
         	url:"https://dapi.kakao.com/v2/local/geo/coord2address.json?x="+longitude+"&y="+latitude+"&input_coord=WGS84",
         	beforeSend: function (header) {
-        		header.setRequestHeader("Authorization","KakaoAK ");
+        		header.setRequestHeader("Authorization","KakaoAK restKey");
             },
             success:function(result){
             	var address=result.documents[0].address.address_name;
@@ -45,7 +45,7 @@
 			        	type:"get",
 			        	url:"https://dapi.kakao.com/v2/local/geo/coord2address.json?x="+latlng.La+"&y="+latlng.Ma+"&input_coord=WGS84",
 			        	beforeSend: function (header) {
-			        		header.setRequestHeader("Authorization","KakaoAK ");
+			        		header.setRequestHeader("Authorization","KakaoAK restKey");
 			            },
 			            success:function(clickresult){
 			            	var clickaddress=clickresult.documents[0].address.address_name;

@@ -139,7 +139,7 @@ const latitude= document.getElementById('latitude').value;
 	type:"get",
 	url:"https://dapi.kakao.com/v2/local/geo/coord2address.json?x="+longitude+"&y="+latitude+"&input_coord=WGS84",
 	beforeSend: function (header) {
-		header.setRequestHeader("Authorization","KakaoAK ");
+		header.setRequestHeader("Authorization","KakaoAK restKey");
     },
     success:function(result){
     	var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스

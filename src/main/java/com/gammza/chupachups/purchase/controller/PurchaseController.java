@@ -30,6 +30,7 @@ import com.siot.IamportRestClient.IamportClient;
 import com.siot.IamportRestClient.exception.IamportResponseException;
 import com.siot.IamportRestClient.response.IamportResponse;
 import com.siot.IamportRestClient.response.Payment;
+import com.gammza.chupachups.purchase.model.vo.api;
 
 @Controller
 @RequestMapping("/member")
@@ -65,8 +66,10 @@ public class PurchaseController {
 	public void pointPurChk(@RequestParam String pointOrderNum, Model model) {
 		model.addAttribute(pointOrderNum);
 	}
-//	restKey 삭제
-	private IamportClient client = new IamportClient("","");
+//	apiKey ignore
+	String apikey = new api().getApi();
+	String secretKey = new api().getSecrectKey();
+	private IamportClient client = new IamportClient(apikey,secretKey);
 	
 	@PostMapping("/checkUid.do")
 	public void selectPointOrderNum(@RequestParam String pointOrderNum, HttpServletResponse response) throws Exception {
