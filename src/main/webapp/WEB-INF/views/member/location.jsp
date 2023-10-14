@@ -59,7 +59,6 @@ function locationSubmit(){
 	}
 }
 
-
 function success(position) {
     /* const latitude = position.latitude;   // 위도(37.xxxx)
     const longitude = position.longitude; // 경도 */
@@ -73,7 +72,7 @@ function success(position) {
     	type:"get",
     	url:"https://dapi.kakao.com/v2/local/geo/coord2address.json?x="+longitude+"&y="+latitude+"&input_coord=WGS84",
     	beforeSend: function (header) {
-    		header.setRequestHeader("Authorization","KakaoAK restKey");
+    		header.setRequestHeader("Authorization","KakaoAK "+KAKAO_API_KEY);
         },
         success:function(result){
         	var address=result.documents[0].address.address_name;
@@ -113,7 +112,7 @@ function success(position) {
 		        	type:"post",
 		        	url:"https://dapi.kakao.com/v2/local/geo/coord2address.json?x="+latlng.La+"&y="+latlng.Ma+"&input_coord=WGS84",
 		        	beforeSend: function (header) {
-		        		header.setRequestHeader("Authorization","KakaoAK restKey");
+		        		header.setRequestHeader("Authorization","KakaoAK "+KAKAO_API_KEY);
 		            },
 		            success:function(clickresult){
 		            	var clickaddress=clickresult.documents[0].address.address_name;
@@ -193,11 +192,11 @@ function getAccessToken(){
 		type:'GET',
 		url: 'https://sgisapi.kostat.go.kr/OpenAPI3/auth/authentication.json',
 		data:{
-		consumer_key : 'd063e685682f42c998cc',
-		consumer_secret : '26cef6c7c4f64fe4bea7'
+		consumer_key : SGIS_SERVICE_ID,
+		consumer_secret : SGIS_API_KEY
 		},
 		success:function(data){
-			errCnt = 0;																									
+			errCnt = 0;
 			accessToken = data.result.accessToken;
 			getUserLocation();
 			/* position={"latitude":37.533921602961506, "longitude":126.89677032759451 } */

@@ -181,31 +181,10 @@ public class MemberController {
 		
 		//return "redirect:/";		// String 타입으로 반환 후 반환
 	}
-      
-   /*   
-	@PostMapping("/memberUpdate.me")
-	public String memberUpdate(Member member, Model model, @RequestParam String newPwd, RedirectAttributes redirectAtt) {
-		if(newPwd.length() > 0) {
-			String encodedPassword = passwordEncoder.encode(newPwd);
-			member.setUserPwd(encodedPassword);
-		}else {
-			String encodedPassword = passwordEncoder.encode(member.getUserPwd());
-			member.setUserPwd(encodedPassword);
-		}
-		int result = memberService.updateMember(member);
-		
-		if(result > 0) {
-			redirectAtt.addFlashAttribute("msg", "회원정보 수정되셨습니다");
-		} else {
-			redirectAtt.addFlashAttribute("msg", "회원정보 수정 실패");
-
-		}
-		return "redirect:/member/memberInfo.me";
-	}
-	*/
 	
 	@PostMapping("/memberUpdate_Ad.me")
-	public String memberUpdate_Ad(Member member, Model model, @RequestParam String newPwd, @RequestParam int nowPage, RedirectAttributes redirectAtt) {
+	public String memberUpdate_Ad(Member member, Model model, @RequestParam String newPwd, @RequestParam int nowPage,
+			RedirectAttributes redirectAtt) {
 		if(newPwd.length() > 0) {
 			String encodedPassword = passwordEncoder.encode(newPwd);
 			member.setUserPwd(encodedPassword);

@@ -67,9 +67,9 @@ public class PurchaseController {
 		model.addAttribute(pointOrderNum);
 	}
 //	apiKey ignore
-	String apikey = new api().getApi();
-	String secretKey = new api().getSecrectKey();
-	private IamportClient client = new IamportClient(apikey,secretKey);
+	String iamPortApi = new api().getIamPortApi();
+	String iamPortSecrectKey = new api().getIamPortSecrectKey();
+	private IamportClient client = new IamportClient(iamPortApi,iamPortSecrectKey);
 	
 	@PostMapping("/checkUid.do")
 	public void selectPointOrderNum(@RequestParam String pointOrderNum, HttpServletResponse response) throws Exception {

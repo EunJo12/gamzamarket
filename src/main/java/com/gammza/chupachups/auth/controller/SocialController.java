@@ -1,7 +1,5 @@
 package com.gammza.chupachups.auth.controller;
 
-import java.util.UUID;
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +25,7 @@ import com.gammza.chupachups.auth.model.vo.KakaoProfile;
 import com.gammza.chupachups.auth.model.vo.NaverProfile;
 import com.gammza.chupachups.member.model.service.MemberService;
 import com.gammza.chupachups.member.model.vo.Member;
+import com.gammza.chupachups.purchase.model.vo.api;
 
 @Controller
 @SessionAttributes({"loginMember"})
@@ -34,6 +33,11 @@ public class SocialController {
 	
 			@Autowired
 			private MemberService memberService;
+			
+			//Api
+			String kakaoApiKey = new api().getKakaoApiKey();
+			String naverClient = new api().getNaverClient();
+			String naverApiKey = new api().getNaverApiKey();
 			
 			// KAKAO
 			@GetMapping(value = "/auth/kakao/callback", produces = "text/json; charset=UTF-8")
@@ -54,8 +58,8 @@ public class SocialController {
 				// HttpBody object 생성
 				MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>();
 				params.add("grant_type", "authorization_code");
-				params.add("client_id", "{ REST API 키 }");
-				params.add("redirect_uri", "http://localhost:8095/chupachups/auth/kakao/callback");
+				params.add("client_id", kakaoApiKey);
+				params.add("redirect_uri", "http://localhost:8095/gammza/auth/kakao/callback");
 				params.add("code", code);
 
 				// HttpHeader와 HttpBody를 하나의 object에 담음
@@ -179,9 +183,9 @@ public class SocialController {
 				// HttpBody object 생성 
 				MultiValueMap<String, String> paramsN1 = new LinkedMultiValueMap<String, String>();
 				paramsN1.add("grant_type", "authorization_code");
-				paramsN1.add("client_id", "{ 애플리케이션 Client ID }");
-				paramsN1.add("client_secret", "{ 애플리케이션 Client Secret }");
-				paramsN1.add("redirect_uri", "http://localhost:8095/chupachups/auth/naver/callback");
+				paramsN1.add("client_id", naverClient);
+				paramsN1.add("client_secret", naverApiKey);
+				paramsN1.add("redirect_uri", "http://localhost:8095/gammza/auth/naver/callback");
 				paramsN1.add("code", code);
 				
 				// HttpHeader와 HttpBody를 하나의 object에 담음  

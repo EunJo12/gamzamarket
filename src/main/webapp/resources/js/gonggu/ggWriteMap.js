@@ -12,7 +12,7 @@
         	type:"get",
         	url:"https://dapi.kakao.com/v2/local/geo/coord2address.json?x="+longitude+"&y="+latitude+"&input_coord=WGS84",
         	beforeSend: function (header) {
-        		header.setRequestHeader("Authorization","KakaoAK restKey");
+        		header.setRequestHeader("Authorization","KakaoAK "+KAKAO_API_KEY);
             },
             success:function(result){
             	var address=result.documents[0].address.address_name;
@@ -48,7 +48,7 @@
 			        	type:"get",
 			        	url:"https://dapi.kakao.com/v2/local/geo/coord2address.json?x="+latlng.La+"&y="+latlng.Ma+"&input_coord=WGS84",
 			        	beforeSend: function (header) {
-			        		header.setRequestHeader("Authorization","KakaoAK restKey");
+			        		header.setRequestHeader("Authorization","KakaoAK "+KAKAO_API_KEY);
 			            },
 			            success:function(clickresult){
 			            	var clickaddress=clickresult.documents[0].address.address_name;
@@ -85,8 +85,8 @@
 			type:'GET',
 			url: 'https://sgisapi.kostat.go.kr/OpenAPI3/auth/authentication.json',
 			data:{
-			consumer_key : 'd063e685682f42c998cc',
-			consumer_secret : '26cef6c7c4f64fe4bea7'
+			consumer_key : SGIS_SERVICE_ID,
+			consumer_secret : SGIS_API_KEY
 			},
 			success:function(data){
 				errCnt = 0;																									

@@ -8,7 +8,8 @@
 <head>
 <meta charset="UTF-8">
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=44e2b21ec219944c6d834fff124a603d&libraries=services,clusterer"></script>
+<script src="${pageContext.request.contextPath}/resources/js/api/api.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5b986dfa5dc3b959941fb9a2d27f06b2&libraries=services,clusterer"></script>
 <title>${param.title }</title>
 <link rel="shortcut icon"
 	href="${pageContext.request.contextPath}/resources/img/header/shorcuticon.png">
@@ -126,12 +127,12 @@
 								<div class="social-icon">
 									<ul>
 										<li class="login-kakao">
-											<a href="https://kauth.kakao.com/oauth/authorize?client_id=restKey입력&redirect_uri=http://localhost:8095/chupachups/auth/kakao/callback&response_type=code">
+											<a href="javascript:kakaoLogURI();">
 												<img src="${pageContext.request.contextPath}/resources/img/header/icon_kakao_long.png" alt="카카오로그인버튼">
 											</a> 
 										</li>
 										<li class="login-naver">
-											<a href="https://nid.naver.com/oauth2.0/authorize?response_type=code&state=test&client_id=restKey입력&state=STATE_STRING&redirect_uri=http://localhost:8095/chupachups/auth/naver/callback">
+											<a href="javascript:naverLogURI();">
 												<img src="${pageContext.request.contextPath}/resources/img/header/icon_naver_long_resize2.png" alt="네이버로그인버튼">
 											</a> 
 									</ul>
@@ -166,6 +167,14 @@
              }
          })
      })
+     
+    function kakaoLogURI(){
+		location.href=KAKAO_LOG_URI;
+	}	
+     
+	function naverLogURI(){
+		location.href=NAVER_LOG_URI;
+	}
 
 
 function fn_click(category) {

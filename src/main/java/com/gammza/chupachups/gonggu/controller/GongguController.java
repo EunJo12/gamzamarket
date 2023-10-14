@@ -161,8 +161,11 @@ public class GongguController {
 		
 		int i = page-1;
 		ArrayList<Gonggu> ggListView2 = new ArrayList<Gonggu>();
-		for(int j=0; i<(8*page); i++,j++) {
-			ggListView2.add(j, mainList.get(i));
+		if(mainList.get(7) != null) {
+			for(int j=0; i<(8*page); i++,j++) {
+				ggListView2.add(j, mainList.get(i)); 
+			}
+			
 		}
 		model.addAttribute("mainList", ggListView2);
 		model.addAttribute("page", page);

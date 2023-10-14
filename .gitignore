@@ -50,3 +50,6 @@ target/classes/log4j.xml
 target/m2e-wtp/web-resources/META-INF/maven/com.gammza/chupachups/pom.properties
 target/m2e-wtp/web-resources/META-INF/maven/com.gammza/chupachups/pom.xml
 target/test-classes/log4j.xml
+/.metadata/
+src/main/webapp/resources/js/api/api.js
+src/main/java/com/gammza/chupachups/purchase/model/vo/api.java

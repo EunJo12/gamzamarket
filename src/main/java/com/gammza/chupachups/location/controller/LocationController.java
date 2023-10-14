@@ -85,7 +85,7 @@ public class LocationController {
 		model.addAttribute("loginMember", member);
 		
 		ModelAndView mav=new ModelAndView();
-		mav.setView(new RedirectView("/chupachups/location/location.lo"));
+		mav.setView(new RedirectView("/gammza/location/location.lo"));
 		
 		if(result==1) {
 			redirectAttr.addFlashAttribute("msg","위치가 정상적으로 업데이트 되었습니다.");

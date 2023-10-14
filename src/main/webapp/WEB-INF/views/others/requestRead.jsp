@@ -4,9 +4,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/others/requestRead.css?<%=System.currentTimeMillis() %>" type="text/css" />
-<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=44e2b21ec219944c6d834fff124a603d&libraries=services,clusterer"></script>
-
 <jsp:include page="/WEB-INF/views/common/header.jsp">
 	<jsp:param value="${request.requestName }" name="title" />
 </jsp:include>
@@ -104,7 +101,7 @@ $.ajax({
 			type:"get",
 			url:"https://dapi.kakao.com/v2/local/geo/coord2address.json?x="+longitude+"&y="+latitude+"&input_coord=WGS84",
 			beforeSend: function (header) {
-				header.setRequestHeader("Authorization","KakaoAK ");
+				header.setRequestHeader("Authorization","KakaoAK "+KAKAO_API_KEY);
 		    },
 		    success:function(result){
 		    	var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
